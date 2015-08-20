@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+/*
+Jaket Login - Custom style for Naked2-Theme login form
+Contributor:
+- Dhuhanawuri Agung Nugroho @dwaan
+
+Copyright (c) 2014 Xinix Technology
+*/
+
+body { display:table; background:#fafafa }
+main { position:static; display:table-cell; vertical-align:middle }
+
+#login { display:block; margin:0 auto; padding:0; background:none; border:none }
+#login p { font-size:1.2em; text-align:center }
+#login .xn { font-size:128px; margin:24px auto 0; width:128px; display:block; color:#838383 }
+
+#login h1 { text-align:center; font-weight:200; font-size:3.5em; line-height:100%; color:#000 }
+#login h1 strong { font-weight:400 }
+
+*::-webkit-input-placeholder { color:#666; font-weight:200 }
+*:-moz-placeholder { color:#666; font-weight:200 }
+*::-moz-placeholder { color:#666; font-weight:200 }
+*:-ms-input-placeholder { color:#666; font-weight:200 }
+
+#login input[type="text"],
+#login input[type="password"] {
+	background:none; border:none!important; border-bottom:1px solid #ccc!important; padding:0 8px; margin:0 auto; display:block; line-height:48px; font-size:1.2em;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	-ms-border-radius:0;
+	-o-border-radius:0;
+	border-radius:0;
+}
+#login a.button,
+#login input.button { padding:8px 64px; font-weight:200; font-size:1.6em; border:none }
+#login input.button { margin:32px auto 0 }
+#login .row { padding:8px 32px 4px }
+#login small { font-size:0.9em; padding:4px 0 0; display:block }
+#login .placeholder { margin:8px auto }
+
+@media screen and (min-width:568px) {
+	body { background:#cacaca }
+
+	#login {
+		max-width:380px; background:#f5f5f5; border:1px solid #ddd; padding:32px 0 24px;
+		-webkit-border-radius:8px;
+		-moz-border-radius:8px;
+		-ms-border-radius:8px;
+		-o-border-radius:8px;
+		border-radius:8px;
+		-webkit-box-shadow:0 8px 32px rgba(0,0,0,0.16);
+		-moz-box-shadow:0 8px 32px rgba(0,0,0,0.16);
+		-ms-box-shadow:0 8px 32px rgba(0,0,0,0.16);
+		-o-box-shadow:0 8px 32px rgba(0,0,0,0.16);
+		box-shadow:0 8px 32px rgba(0,0,0,0.16);
+	}
+}
