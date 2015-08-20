@@ -1,16 +1,21 @@
 {
     "name": "xinix-technology/jacket",
     "description": "When Bono gets Naked, but use several T-shirt, all his got is Jacket.",
-    "license": "Attribution-NonCommercial-NoDerivatives 4.0 International",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Xinix Technology",
             "email": "hello@xinix.co.id"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/xinix-technology/bono-blade"
+        }
+    ],
     "require": {
-        "xinix-technology/blade-theme": "~0.5.81",
-        "xinix-technology/bono-blade": "~0.8.3"
+        "xinix-technology/bono-blade": "1.0.0"
     },
     "autoload": {
         "psr-0": {
