@@ -8,14 +8,8 @@
             "email": "hello@xinix.co.id"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/xinix-technology/bono-blade"
-        }
-    ],
     "require": {
-        "xinix-technology/bono-blade": "1.0.0"
+        "krisanalfa/blade-theme": "~0.5.81"
     },
     "autoload": {
         "psr-0": {
