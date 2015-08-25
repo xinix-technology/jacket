@@ -33,13 +33,13 @@ foreach (f('controller')->schema() as $key => $field) {
     @if(!$entries->count(true))
         <div class="contentcenter">
             <div class="middle">
-                <p class="empty"><i class="icon icon-docs xn-5x"></i><br />Data still empty.<br />Click <a href="{{ f('controller.url', '/null/create') }}"><i class="icon icon-plus"></i> New</a> to add new data.</p>
+                <p class="empty"><i class="xn xn-docs"></i><br />Data still empty.<br />Click <a href="{{ f('controller.url', '/null/create') }}"><i class="xn xn-plus"></i> New</a> to add new data.</p>
             </div>
         </div>
     @else
         <form method="get" id="search-form" class="wrapper full">
             <div class="table-container">
-                <table class="table nowrap stripped hover">
+                <table class="table nowrap hover">
                     <thead>
                         @section('table.head')
                         <tr>

@@ -8,14 +8,14 @@
 
 @section('back')
     <ul class="flat left">
-        <li><a href="{{ f('controller.url', '/:id/read') }}"><i class="icon icon-left-open"></i>{{ l('Back') }}</a></li>
-        <li><a href="{{ f('controller.url', '/null/create') }}" class="disable"><i class="icon icon-plus"></i>{{ l('New') }}</a></li>
-        <li><a href="{{ f('controller.url') }}" class="disable"><i class="icon icon-pencil"></i> {{ l('Edit') }}</a></li>
+        <li><a href="{{ f('controller.url', '/:id/read') }}"><i class="xn xn-left-open"></i>{{ l('Back') }}</a></li>
+        <li><a href="{{ f('controller.url', '/null/create') }}" class="disable"><i class="xn xn-plus"></i>{{ l('New') }}</a></li>
+        <li><a href="{{ f('controller.url') }}" class="disable"><i class="xn xn-pencil"></i> {{ l('Edit') }}</a></li>
     </ul>
 @stop
 
 @section('fields')
-    <form method="post" id="updateform">
+    <form method="post" id="updateform" class="read">
         <h1>{{ l('Update {0}', array(Inflector::humanize(f('controller')->getClass())))}}</h1>
         <div class="row">
             <?php $i = 0; ?>

@@ -8,9 +8,9 @@
 
 @section('back')
     <ul class="flat left">
-        <li><a href="{{ f('controller.url') }}"><i class="icon icon-left-open"></i>{{ l('Back') }}</a></li>
-        <li><a href="{{ f('controller.url', '/null/create') }}"><i class="icon icon-plus"></i>{{ l('New') }}</a></li>
-        <li><a href="{{ f('controller.url', '/:id/update') }}"><i class="icon icon-pencil"></i> {{ l('Edit') }}</a></li>
+        <li><a href="{{ f('controller.url') }}"><i class="xn xn-left-open"></i>{{ l('Back') }}</a></li>
+        <li><a href="{{ f('controller.url', '/null/create') }}"><i class="xn xn-plus"></i>{{ l('New') }}</a></li>
+        <li><a href="{{ f('controller.url', '/:id/update') }}"><i class="xn xn-pencil"></i> {{ l('Edit') }}</a></li>
     </ul>
 @stop
 
@@ -38,7 +38,7 @@
 @section('contextual.content')
     <nav class="row">
         <div class="pull-left">
-            <a href="{{ f('controller.url', '/:id/delete') }}" class="button error"><i class="icon icon-trash"></i>{{{ l('Delete') }}}</a>
+            <a href="{{ f('controller.url', '/:id/delete') }}" class="button error"><i class="xn xn-trash"></i>{{{ l('Delete') }}}</a>
         </div>
         <div class="pull-right">&nbsp;</div>
     </nav>

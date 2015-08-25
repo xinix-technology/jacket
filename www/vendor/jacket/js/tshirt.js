@@ -49,36 +49,10 @@ $(function() {
         table.children ("thead").css ("height", table.children ("thead").height () + "px");
         table.children ("tbody").css ("margin-top", table.children ("thead").height () + "px");
     }
-//    tableFixed ("pixels");
+    // tableFixed ("pixels");
 
-    // Push object to this variable to later hide it on click outside the element
-    window.elementToHide = [];
-    // Hide element for above array
-    $("html").click (function () {
-        $.each(window.elementToHide, function (index) {
-            $(this).slideUp (100);
-        })
-    });
 
-    // User drop down menu
-    /*
-        $("nav .user > a").click (function () {
-            $(this).siblings (".sub").slideToggle (100);
-            window.elementToHide.push ($(this).siblings (".sub"));
-
-            return false;
-        });
-    */
-
-    // Focus on first error input
-    $("form .has-error:first input").focus ();
-
-    // Alert close 
-    $(".alert .close").click ( function () {
-        $(this).parent ().parent ().slideUp (100);
-    });
-
-    $(".button.delete").click ( function () {        
+    $(".button.delete").click ( function () {
         $.ajax({
             url:$(this).attr ("href")
         }).done(function(element, status) {
@@ -94,7 +68,6 @@ $(function() {
     });
 
     $("#searchbar").keypress(function(evt){
-
         if(evt.keyCode == 13){
             evt.preventDefault();
 
@@ -121,23 +94,21 @@ $(function() {
         window.location = url;
      });
 
-    $(".tabbarArea").owlCarousel({
-        itemsCustom : [
-            [0, 1],
-            [560, 2],
-            [860, 3],
-            [1025, 4],
-        ],
-        pagination: false,
-        navigation: true,
-        navigationText: [
-            "<i class='xn xn-angle-left'></i>",
-            "<i class='xn xn-angle-right'></i>"
-        ],
-    });
+    // $(".tabbarArea").owlCarousel({
+    //     itemsCustom : [
+    //         [0, 1],
+    //         [560, 2],
+    //         [860, 3],
+    //         [1025, 4],
+    //     ],
+    //     pagination: false,
+    //     navigation: true,
+    //     navigationText: [
+    //         "<i class='xn xn-angle-left'></i>",
+    //         "<i class='xn xn-angle-right'></i>"
+    //     ],
+    // });
 
-    var index = $( ".owl-item" ).index($('.tabbarArea .button.active').parents('.owl-item'));
-    $(".tabbarArea").trigger("owl.goTo", index);
-    
-    
+    // var index = $( ".owl-item" ).index($('.tabbarArea .button.active').parents('.owl-item'));
+    // $(".tabbarArea").trigger("owl.goTo", index);
 });

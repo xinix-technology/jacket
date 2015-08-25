@@ -50,9 +50,14 @@
 			@section('topbar')
 				<nav class="nav-menu">
 					<div class="pull-left">
-						@section('applogo')
-							<h1 class="brand"><a href="<?php echo URL::base() ?>"><span class="logo"><img src="<?php echo Theme::base('img/bono.png') ?>" width="32" height="32" alt="x" /></span> <span>Bono</span></a></h1>
-						@show
+						<h1>
+							<a href="<?php echo URL::base() ?>">
+								@section('applogo')
+								<span class="logo"><img src="<?php echo Theme::base('img/bono.png') ?>" alt="Bono" /></span>
+								<span>Naked</span>
+								@show
+							</a>
+						</h1>
 					</div>
 					<!-- <div class="search">
 						@section('mainsearch')
@@ -68,9 +73,9 @@
 						<nav class="actions">
 							@section('back')
 								<ul class="flat left">
-									<li><a href="{{ f('controller.url') }}" class="disable"><i class="icon icon-left-open"></i>{{ l('Back') }}</a></li>
-									<li><a href="{{ f('controller.url', '/null/create') }}"><i class="icon icon-plus"></i>{{ l('New') }}</a></li>
-									<li><a href="{{ f('controller.url') }}" class="disable"><i class="icon icon-pencil"></i> {{ l('Edit') }}</a></li>
+									<li><a href="{{ f('controller.url') }}" class="disable"><i class="xn xn-left-open"></i>{{ l('Back') }}</a></li>
+									<li><a href="{{ f('controller.url', '/null/create') }}"><i class="xn xn-plus"></i>{{ l('New') }}</a></li>
+									<li><a href="{{ f('controller.url') }}" class="disable"><i class="xn xn-pencil"></i> {{ l('Edit') }}</a></li>
 								</ul>
 							@show
 							@section('tabssearch')
@@ -78,7 +83,7 @@
 									@section('search')
 										<div class="navsearch">
 											<form action="" method="get">
-												<i class="icon icon-search"></i>
+												<i class="xn xn-search"></i>
 												@section('searchinput')
 													<input type="text" tabindex="-1" placeholder="{{ l('Main') }} {{ l('Search') }}" id="searchMenu" style="width:120px" />
 												@show
@@ -97,10 +102,10 @@
 							@section('menu')
 								<ul class="flat right">
 									@section('menusearch')
-										<li><a href="#" onclick="$('.navsearch, .tabbarArea').fadeToggle(100);"><i class="icon icon-search"></i> {{ l('Search') }}</a></li>
+										<li><a href="#" onclick="$('.navsearch, .tabbarArea').fadeToggle(100);"><i class="xn xn-search"></i> {{ l('Search') }}</a></li>
 									@show
 									@section('menudefault')
-										<li><a href="{{ f('controller.url') }}"><i class="icon icon-arrows-ccw"></i></a></li>
+										<li><a href="{{ f('controller.url') }}"><i class="xn xn-arrows-ccw"></i></a></li>
 									@show
 									@section('menumore')
 										@section('menumorecontent')
@@ -113,25 +118,35 @@
 					@show
 					<div class="pull-right">
 						@section('usermenu')
-							<ul class="flat topbar">
-								<li class="notification">
-									<a href="#"> <i class="icon icon-bell"></i> <span class="badge">2</span></a>
-									<ul class="sub animated">
-										<li><a href="#"><i class="xn xn-comment-o"></i>New Comment <span class="sub-badge pull-right">+5</span></a></li>
-										<li><a href="#"><i class="xn xn-envelope-o"></i>New Message <span class="sub-badge pull-right">+2</span></a></li>
-									</ul>
-								</li>
-								<li class="user">
+							<ul class="topbar">
+								<li class="sub notification">
 									<a href="#">
-										<span class="avatar"><i class="icon icon-user"></i></span> User<i class="icon icon-down-open"></i>
+										<i class="xn xn-bell"></i>
+										<span class="badge solid round error">2</span>
 									</a>
-									<ul class="sub animated">
-										<li><a href="#"><i class="xn xn-user"></i> Profile</a></li>
-										<li><a href="#"><i class="xn xn-cogs"></i> Settings</a></li>
-										<li><a href="#"><i class="xn xn-sign-out"></i> Logout</a></li>
+									<ul class="context-menu">
+										<li><a href="#">Inbox</a></li>
+										<li><a href="#">Trash</a></li>
+										<li><a href="#">Deleted</a></li>
 									</ul>
 								</li>
-								<li class="help"><a href="#"><i class="icon icon-help"></i></a></li>
+								<li class="sub user">
+									<a href="#">
+										<span class="photo" style="background: #000"></span>
+										<span>Admin</span>
+										<i class="xn xn-down-open-mini"></i>
+									</a>
+									<ul class="context-menu right">
+										<li><a href="#">Design</a></li>
+										<li><a href="#">Web Design</a></li>
+										<li><a href="#">Web Development</a></li>
+										<li class="divider"></li>
+										<li><a href="#">Illustrations</a></li>
+										<li><a href="#">Designer</a></li>
+									</ul>
+								</li>
+								<li class="devider"></li>
+								<li><a href="#"><i class="xn xn-help-circled"></i></a></li>
 							</ul>
 						@show
 					</div>
@@ -141,19 +156,20 @@
 			@section('sidebar')
 				<aside class="sidebar">
 					<ul class="nav with-icon">
-						<li>&nbsp;</li>
-						<li><a href="<?php echo URL::base() ?>"><i class="icn-left icon icon-home"></i> Dashboard <i class="icn-right icon icon-right-open-mini"></i></a></li>
-						<li><a href="<?php echo URL::base('icons') ?>"><i class="icn-left icon icon-heart"></i> New Icons <i class="icn-right icon icon-right-open-mini"></i></a></li>
-						<li>&nbsp;</li>
-						<li><a href="<?php echo URL::base('table') ?>"><i class="icn-left icon icon-book-open"></i> Table View <i class="icn-right icon icon-right-open-mini"></i></a></li>
-						<li><a href="<?php echo URL::base('list') ?>"><i class="icn-left icon icon-menu"></i> List View <i class="icn-right icon icon-right-open-mini"></i></a></li>
-						<li><a href="<?php echo URL::base('grid') ?>"><i class="icn-left icon icon-layout"></i> Grid View <i class="icn-right icon icon-right-open-mini"></i></a></li>
-						<li>&nbsp;</li>
-						<li><a href="<?php echo URL::base('detail') ?>"><i class="icn-left icon icon-newspaper"></i> Detail View <i class="icn-right icon icon-right-open-mini"></i></a></li>
-						<li><a href="<?php echo URL::base('form') ?>"><i class="icn-left icon icon-keyboard"></i> Form View <i class="icn-right icon icon-right-open-mini"></i></a></li>
-						<li>&nbsp;</li>
-						<li><a href="<?php echo URL::base('user') ?>"><i class="icn-left icon icon-users"></i> User View <i class="icn-right icon icon-right-open-mini"></i></a></li>
-						<li><a href="<?php echo URL::base('user') ?>"><i class="icn-left icon icon-vcard"></i> Role View <i class="icn-right icon icon-right-open-mini"></i></a></li>
+						<li><a href="<?php echo URL::base() ?>"><i class="icn-left xn xn-home"></i> Dashboard <i class="icn-right xn xn-right-open-mini"></i></a></li>
+						<li class="devider"></li>
+						<li><a href="<?php echo URL::base() ?>"><i class="icn-left xn xn-home"></i> Inbox <span class="icn-right badge round solid error">10</span></a></li>
+						<li><a href="<?php echo URL::base('icons') ?>"><i class="icn-left xn xn-heart"></i> New Icons <i class="icn-right xn xn-right-open-mini"></i></a></li>
+						<li class="devider"></li>
+						<li><a href="<?php echo URL::base('table') ?>"><i class="icn-left xn xn-book-open"></i> Table View <i class="icn-right xn xn-right-open-mini"></i></a></li>
+						<li><a href="<?php echo URL::base('list') ?>"><i class="icn-left xn xn-menu"></i> List View <i class="icn-right xn xn-right-open-mini"></i></a></li>
+						<li><a href="<?php echo URL::base('grid') ?>"><i class="icn-left xn xn-layout"></i> Grid View <i class="icn-right xn xn-right-open-mini"></i></a></li>
+						<li class="devider"></li>
+						<li><a href="<?php echo URL::base('detail') ?>"><i class="icn-left xn xn-newspaper"></i> Detail View <i class="icn-right xn xn-right-open-mini"></i></a></li>
+						<li><a href="<?php echo URL::base('form') ?>"><i class="icn-left xn xn-keyboard"></i> Form View <i class="icn-right xn xn-right-open-mini"></i></a></li>
+						<li class="devider"></li>
+						<li><a href="<?php echo URL::base('user') ?>"><i class="icn-left xn xn-users"></i> User View <i class="icn-right xn xn-right-open-mini"></i></a></li>
+						<li><a href="<?php echo URL::base('user') ?>"><i class="icn-left xn xn-vcard"></i> Role View <i class="icn-right xn xn-right-open-mini"></i></a></li>
 					</ul>
 				</aside>
 			@show
