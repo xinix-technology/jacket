@@ -40,12 +40,58 @@ main.content > .wrapper.full { padding:0 }
 .contentcenter .middle { display:table-cell; width:100%; height:100%; vertical-align:middle; text-align:center }
 .contentcenter .middle .xn-docs { font-size:8em; line-height:1em; margin:0 0 8px; color:#ccc }
 
-.disable { color:#ccc }
+.disable { color:#ccc!important }
 
 .read .row { margin:0 -16px }
 .read .row .row { padding:16px; margin:0 }
 .read .row .row .row { padding:0 }
 .read .field { border:none; white-space:normal; padding:0; font-size:1.4em }
+
+.alert {
+	position:relative; width:100%; top:0;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	-ms-border-radius:0;
+	-o-border-radius:0;
+	border-radius:0;
+}
+.alert div { display:table; width:100% }
+.alert .icon,
+.alert .close,
+.alert p { display:table-cell; vertical-align:middle; margin:0; pointer-events:none }
+.alert p { padding:8px 8px 8px 0; text-align:left; line-height:1.24em }
+.alert p span:after { content:"," }
+.alert p span:last-child:before { content:"and " }
+.alert p span:last-child:after{ content:"." }
+.alert p span:first-child:last-child:before { content:"" }
+.alert p span:first-child:last-child:after{ content:"." }
+.alert .icon { padding:4px 24px; width:50px; font-size:24px }
+.alert .close { color:#fff!important; width:110px; padding:0; text-align:center; white-space:nowrap; background:none!important; border:none }
+@media only screen and (min-width: 640px) {
+	.alert {
+		position:fixed; width:640px; margin:0 auto; top:0;
+		-webkit-border-radius:0 0 4px 4px;
+		-moz-border-radius:0 0 4px 4px;
+		-ms-border-radius:0 0 4px 4px;
+		-o-border-radius:0 0 4px 4px;
+		border-radius:0 0 4px 4px;
+		-webkit-box-shadow:0 0 64px #333;
+		-moz-box-shadow:0 0 64px #333;
+		-ms-box-shadow:0 0 64px #333;
+		-o-box-shadow:0 0 64px #333;
+		box-shadow:0 0 64px #333;
+	}
+}
+
+#popupContent { text-align:center }
+#popupContent form { padding:16px 0 }
+#popupContent .xn-right-bold { color:#ccc }
+#popupContent .content { padding-bottom:0 }
+#popupContent .banner { padding:0 0 8px }
+#popupContent .actions { position:initial }
+#popupContent .actions li { width:50%; float:left; display:block; border-left:1px solid #ccc }
+#popupContent .actions li:first-child,
+#popupContent .actions li.first-child { border-left:none }
 
 /*
  * Image replacement

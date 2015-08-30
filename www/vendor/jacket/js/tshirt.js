@@ -1,25 +1,4 @@
-// Avoid `console` errors in browsers that lack a console.
-(function() {
-    var method;
-    var noop = function () {};
-    var methods = [
-        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-        'timeStamp', 'trace', 'warn'
-    ];
-    var length = methods.length;
-    var console = (window.console = window.console || {});
-
-    while (length--) {
-        method = methods[length];
-
-        // Only stub undefined methods.
-        if (!console[method]) {
-            console[method] = noop;
-        }
-    }
-}());
+"use strict";
 
 $(function() {
     // Place any jQuery/helper plugins in here.
@@ -92,7 +71,24 @@ $(function() {
 
         var url = window.location.href.replace(/\?.*/g,"");
         window.location = url;
-     });
+    });
+
+    $(".alert.info div").prepend("<i class='icon xn xn-info-circled'></i>");
+    $(".alert.error div").prepend("<i class='icon xn xn-attention'></i>");
+    $(".alert").click(function () {
+        $(this).slideUp (128);
+    });
+
+    $(".popup").each (function () {
+        var param = {};
+
+        if ($(this).hasClass ("noclose"))
+            param.closeButton = false;
+        if ($(this).hasClass ("modal"))
+            param.closeOutside = false;
+
+        $(".popup").popup(param);
+    });
 
     // $(".tabbarArea").owlCarousel({
     //     itemsCustom : [

@@ -53,8 +53,16 @@
 						<h1>
 							<a href="<?php echo URL::base() ?>">
 								@section('applogo')
-								<span class="logo"><img src="<?php echo Theme::base('img/bono.png') ?>" alt="Bono" /></span>
-								<span>Naked</span>
+									<span class="logo">
+										@section('applogo.image')
+											<img src="<?php echo Theme::base('img/bono.png') ?>" alt="Bono" />
+										@show
+									</span>
+									<span>
+										@section('applogo.title')
+											Bono
+										@show
+									</span>
 								@show
 							</a>
 						</h1>
