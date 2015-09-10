@@ -1,6 +1,6 @@
 <?php
 
-namespace Jacket;
+namespace Xinix\Theme;
 
 use Bono\Theme\Theme;
 use ROH\Util\Inflector;
@@ -26,7 +26,7 @@ class Jacket extends BladeTheme
 
         $app = \App::getInstance();
 
-        $app->hook('controller.delete.success', function() use ($app) {
+        $app->hook('controller.delete.success', function () use ($app) {
             $app->redirect(f('controller.url'));
         });
     }
