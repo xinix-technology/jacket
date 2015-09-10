@@ -15,4 +15,4 @@ www/vendor/respond
 www/vendor/tshirt-popup
 www/vendor/tshirt-scroll
 
-./vendor
+./vendor/*
