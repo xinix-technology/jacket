@@ -1,6 +1,6 @@
 <?php
 
-namespace Xinix\Theme\Jacket;
+namespace Xinix\Theme;
 
 use Bono\Theme\Theme;
 use ROH\Util\Inflector;
