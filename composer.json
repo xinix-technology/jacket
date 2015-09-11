@@ -15,7 +15,7 @@
         }
     ],
     "require": {
-        "apriantopramana/blade-theme": "~0.5.81"
+        "apriantopramana/blade-theme": "dev-master"
     },
     "autoload": {
         "psr-0": {
