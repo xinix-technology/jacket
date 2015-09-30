@@ -14,7 +14,7 @@
             "url": "https://github.com/xinix-technology/blade-theme.git"
         }
     ],
-    "require-dev": {
+    "require": {
         "xinix-technology/blade-theme": "dev-master"
     },
     "autoload": {
