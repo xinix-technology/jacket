@@ -8,14 +8,8 @@
             "email": "hello@xinix.co.id"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/xinix-technology/blade-theme.git"
-        }
-    ],
-    "require-dev": {
-        "xinix-technology/blade-theme": "dev-master"
+    "require": {
+        "xinix-technology/blade-theme": "~0.5.81"
     },
     "autoload": {
         "psr-0": {
