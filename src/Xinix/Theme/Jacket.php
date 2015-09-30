@@ -4,12 +4,10 @@ namespace Xinix\Theme;
 
 use Bono\Theme\Theme;
 use ROH\Util\Inflector;
-use KrisanAlfa\Theme\BladeTheme;
-use KrisanAlfa\Blade\BladeView;
+use Xinix\Theme\BladeTheme;
 
 class Jacket extends BladeTheme
 {
-
     public function __construct(array $options = array())
     {
         // call parent constructor
@@ -30,19 +28,4 @@ class Jacket extends BladeTheme
             $app->redirect(f('controller.url'));
         });
     }
-
-    // public function getView()
-    // {
-    //     if (is_null($this->view)) {
-    //         if (!is_dir($this->options['cachePath'])) {
-    //             mkdir($this->options['cachePath'], 0755, true);
-    //         }
-
-    //         $this->options['viewPaths'] = $this->arrayFlatten($this->baseDirectories);
-
-    //         $this->view = new BladeView($this->options);
-    //     }
-
-    //     return $this->view;
-    // }
 }
