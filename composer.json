@@ -14,7 +14,7 @@
             "url": "https://github.com/apriantopramana/blade-theme.git"
         }
     ],
-    "require": {
+    "require-dev": {
         "apriantopramana/blade-theme": "dev-master"
     },
     "autoload": {
