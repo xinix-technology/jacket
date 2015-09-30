@@ -1,5 +1,5 @@
 {
     "dependencies": {
-        "xinix-technology/blade-theme": "~0.5.81"
+        "xinix-technology/blade-theme": "xinix-technology/blade-theme#~0.5.81"
     }
 }

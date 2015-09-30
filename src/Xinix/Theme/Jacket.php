@@ -8,7 +8,6 @@ use Xinix\Theme\BladeTheme;
 
 class Jacket extends BladeTheme
 {
-
     public function __construct(array $options = array())
     {
         // call parent constructor
