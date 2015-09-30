@@ -8,9 +8,6 @@
             "email": "hello@xinix.co.id"
         }
     ],
-    "require": {
-        "xinix-technology/blade-theme": "~0.5.81"
-    },
     "autoload": {
         "psr-0": {
             "Xinix\\Theme\\Jacket": "src/"
