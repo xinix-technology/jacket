@@ -15,7 +15,7 @@
         }
     ],
     "require-dev": {
-        "xinix-technology/blade-theme": "0.5.81"
+        "xinix-technology/blade-theme": "dev-master"
     },
     "autoload": {
         "psr-0": {
