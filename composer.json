@@ -1,5 +1,5 @@
 {
-    "name": "apriantopramana/jacket",
+    "name": "xinix-technology/jacket",
     "description": "When Bono gets Naked, but use several T-shirt, all his got is Jacket.",
     "license": "proprietary",
     "authors": [
@@ -8,14 +8,8 @@
             "email": "hello@xinix.co.id"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/apriantopramana/blade-theme.git"
-        }
-    ],
-    "require-dev": {
-        "apriantopramana/blade-theme": "dev-master"
+    "require": {
+        "xinix-technology/blade-theme": "~0.5.81"
     },
     "autoload": {
         "psr-0": {
