@@ -14,8 +14,8 @@
             "url": "https://github.com/xinix-technology/blade-theme.git"
         }
     ],
-    "require": {
-        "xinix-technology/blade-theme": "~0.5.81"
+    "require-dev": {
+        "xinix-technology/blade-theme": "0.5.81"
     },
     "autoload": {
         "psr-0": {
